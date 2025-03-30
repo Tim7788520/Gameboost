@@ -102,3 +102,21 @@ footer {
   background-color: #111;
   color: #fff;
 }
+
+.faq, .contact {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+}
+.faq-item {
+    margin-bottom: 1.5em;
+}
+.faq-item h3 {
+    color: #0ff;
+}
+
+.qr-code {
+    width: 220px;
+    margin: 1em auto;
+    display: block;
+}
