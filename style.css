@@ -114,3 +114,9 @@ footer {
 .faq-item h3 {
     color: #0ff;
 }
+
+.qr-code {
+    width: 220px;
+    margin: 1em auto;
+    display: block;
+}
