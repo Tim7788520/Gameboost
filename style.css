@@ -33,3 +33,25 @@ footer {
     background-color: #111;
     font-size: 0.9em;
 }
+
+.product-list {
+    padding: 2em;
+    text-align: center;
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+.product-card {
+    background-color: #1a1a1a;
+    border: 1px solid #0ff;
+    border-radius: 8px;
+    padding: 1em;
+    width: 220px;
+}
+.product-card img {
+    width: 100%;
+    border-radius: 4px;
+}
