@@ -18,36 +18,58 @@
   </header>
   <main>
     <h2>商品列表</h2>
+<input type="text" id="searchInput" placeholder="搜尋商品..." onkeyup="searchProducts()" style="width: 90%; max-width: 400px; padding: 10px; margin: 20px auto; display: block; font-size: 1em; border-radius: 6px; border: none; outline: none;" />
+<script>
+  function searchProducts() {
+    var input = document.getElementById('searchInput');
+    var filter = input.value.toLowerCase();
+    var cards = document.getElementsByClassName('product-card');
+    for (var i = 0; i < cards.length; i++) {
+      var card = cards[i];
+      var title = card.getElementsByTagName('h3')[0].textContent.toLowerCase();
+      var desc = card.getElementsByTagName('p')[0].textContent.toLowerCase();
+      card.style.display = (title.includes(filter) || desc.includes(filter)) ? "" : "none";
+    }
+  }
+</script>
+
     <div class="product-grid">
-<div class="product-card">
-<img alt="商品1" src="default-product.png"/>
-<h3>商品1 名稱</h3>
-<p>商品1 的簡要介紹文字...</p>
-<a class="btn" href="product1.html">查看詳細</a>
-</div><div class="product-card">
-<img alt="商品2" src="default-product.png"/>
-<h3>商品2 名稱</h3>
-<p>商品2 的簡要介紹文字...</p>
-<a class="btn" href="product2.html">查看詳細</a>
-</div><div class="product-card">
-<img alt="商品3" src="default-product.png"/>
-<h3>商品3 名稱</h3>
-<p>商品3 的簡要介紹文字...</p>
-<a class="btn" href="product3.html">查看詳細</a>
-</div><div class="product-card">
-<img alt="商品4" src="default-product.png"/>
-<h3>商品4 名稱</h3>
-<p>商品4 的簡要介紹文字...</p>
-<a class="btn" href="product4.html">查看詳細</a>
-</div><div class="product-card">
-<img alt="商品5" src="default-product.png"/>
-<h3>商品5 名稱</h3>
-<p>商品5 的簡要介紹文字...</p>
-<a class="btn" href="product5.html">查看詳細</a>
-</div>
-    </div>
-    <div class="pagination" style="text-align:center; margin: 2em;">
-<a href="products.html" class="page-link" style="margin: 0 5px;">1</a><a href="products2.html" class="page-link" style="margin: 0 5px;">2</a>
+
+      <div class="product-card">
+        <img src="default-product.png" alt="商品1" />
+        <h3>商品1 名稱</h3>
+        <p>商品1 的簡要介紹文字...</p>
+        <a href="product1.html" class="btn">查看詳細</a>
+      </div>
+
+      <div class="product-card">
+        <img src="default-product.png" alt="商品2" />
+        <h3>商品2 名稱</h3>
+        <p>商品2 的簡要介紹文字...</p>
+        <a href="product2.html" class="btn">查看詳細</a>
+      </div>
+
+      <div class="product-card">
+        <img src="default-product.png" alt="商品3" />
+        <h3>商品3 名稱</h3>
+        <p>商品3 的簡要介紹文字...</p>
+        <a href="product3.html" class="btn">查看詳細</a>
+      </div>
+
+      <div class="product-card">
+        <img src="default-product.png" alt="商品4" />
+        <h3>商品4 名稱</h3>
+        <p>商品4 的簡要介紹文字...</p>
+        <a href="product4.html" class="btn">查看詳細</a>
+      </div>
+
+      <div class="product-card">
+        <img src="default-product.png" alt="商品5" />
+        <h3>商品5 名稱</h3>
+        <p>商品5 的簡要介紹文字...</p>
+        <a href="product5.html" class="btn">查看詳細</a>
+      </div>
+
     </div>
   </main>
   <footer>
