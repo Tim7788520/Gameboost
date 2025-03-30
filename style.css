@@ -128,11 +128,3 @@ footer {
     margin: 1em auto;
     display: block;
 }
-
-.product-image {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    display: block;
-    margin: 1em auto;
-}
