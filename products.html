@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品列表 - GameBoost</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>商品列表 - GameBoost</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.getElementsByClassName("product-card");
+      for (let i = 0; i < cards.length; i++) {
+        const title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        cards[i].style.display = title.includes(input) ? "block" : "none";
+      }
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>GameBoost 數位商城</h1>
-        <nav>
-            <a href="index.html">首頁</a>
-            <a href="products.html">商品列表</a>
-            <a href="faq.html">常見問題</a>
-            <a href="contact.html">聯絡我們</a>
-        </nav>
-    </header>
-    <main>
-        <section class="product-list">
-            <h2>熱門商品</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x120.png?text=商品1" alt="商品1">
-                    <h3>商品名稱1</h3>
-                    <p>這是商品的簡要介紹。</p>
-                    <a href="#" class="btn">查看詳細</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x120.png?text=商品2" alt="商品2">
-                    <h3>商品名稱2</h3>
-                    <p>這是商品的簡要介紹。</p>
-                    <a href="#" class="btn">查看詳細</a>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x120.png?text=商品3" alt="商品3">
-                    <h3>商品名稱3</h3>
-                    <p>這是商品的簡要介紹。</p>
-                    <a href="#" class="btn">查看詳細</a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 GameBoost. All rights reserved.</p>
-    </footer>
+  <header>
+    <h1>GameBoost 數位商城</h1>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="products.html">商品列表</a>
+      <a href="faq.html">常見問題</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+  <main>
+    <section class="product-list">
+      <h2>所有商品</h2>
+      <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="搜尋商品名稱..." class="search-box"/>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200x120.png?text=商品1" alt="商品1" />
+          <h3>自動掛機神器</h3>
+          <p>支援多款遊戲，自動打怪、升級無壓力。</p>
+          <a href="product1.html" class="btn">查看詳細</a>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200x120.png?text=商品2" alt="商品2" />
+          <h3>穩定腳本工具</h3>
+          <p>支援 Win10/11，長時間執行不當機。</p>
+          <a href="product2.html" class="btn">查看詳細</a>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200x120.png?text=商品3" alt="商品3" />
+          <h3>功能大全助手</h3>
+          <p>集合多種小功能，一鍵開啟高效率。</p>
+          <a href="product3.html" class="btn">查看詳細</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 GameBoost. All rights reserved.</p>
+  </footer>
 </body>
 </html>
