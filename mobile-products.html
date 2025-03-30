@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>商品列表 - GameBoost</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1em;
+    }
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+    .product-item {
+      display: flex;
+      align-items: center;
+      background: #1a1a1a;
+      border-radius: 10px;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .product-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      margin-right: 15px;
+    }
+    .product-info {
+      flex-grow: 1;
+    }
+    .product-info h3 {
+      margin: 0 0 6px 0;
+      font-size: 1.1em;
+      color: #00ffe7;
+    }
+    .product-info p {
+      margin: 0;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .load-more {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      background: #00ffe7;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 20px auto;
+      width: 80%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GameBoost 數位商城</h1>
+  </header>
+
+  <div class="product-list" id="productList">
+
+    <div class="product-item">
+      <img src="default-product.png" alt="商品1">
+      <div class="product-info">
+        <h3>商品1</h3>
+        <p>這是商品1 的測試說明，協助玩家更有效率地操作。</p>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="default-product.png" alt="商品2">
+      <div class="product-info">
+        <h3>商品2</h3>
+        <p>這是商品2 的測試說明，協助玩家更有效率地操作。</p>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="default-product.png" alt="商品3">
+      <div class="product-info">
+        <h3>商品3</h3>
+        <p>這是商品3 的測試說明，協助玩家更有效率地操作。</p>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="default-product.png" alt="商品4">
+      <div class="product-info">
+        <h3>商品4</h3>
+        <p>這是商品4 的測試說明，協助玩家更有效率地操作。</p>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="default-product.png" alt="商品5">
+      <div class="product-info">
+        <h3>商品5</h3>
+        <p>這是商品5 的測試說明，協助玩家更有效率地操作。</p>
+      </div>
+    </div>
+
+    <div class="product-item">
+      <img src="default-product.png" alt="商品6">
+      <div class="product-info">
+        <h3>商品6</h3>
+        <p>這是商品6 的測試說明，協助玩家更有效率地操作。</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="load-more" onclick="loadMore()">載入更多商品</div>
+
+  <footer>
+    <p>&copy; 2025 GameBoost. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function loadMore() {
+      const list = document.getElementById('productList');
+      for (let i = 7; i <= 10; i++) {
+        const item = document.createElement('div');
+        item.className = 'product-item';
+        item.innerHTML = `
+          <img src="default-product.png" alt="商品${i}">
+          <div class="product-info">
+            <h3>商品${i}</h3>
+            <p>這是商品${i} 的測試說明，協助玩家更有效率地操作。</p>
+          </div>
+        `;
+        list.appendChild(item);
+      }
+    }
+  </script>
+</body>
+</html>
