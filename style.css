@@ -55,3 +55,22 @@ footer {
     width: 100%;
     border-radius: 4px;
 }
+
+.product-detail {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+.product-detail img {
+    width: 100%;
+    max-width: 400px;
+    margin: 1em 0;
+}
+.product-detail ul {
+    list-style: none;
+    padding: 0;
+}
+.product-detail ul li {
+    margin: 0.5em 0;
+}
