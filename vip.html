@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIP 尊榮方案 - GameBoost</title>
+  <style>
+    body { background: #111; color: #fff; font-family: sans-serif; margin: 0; padding: 0; }
+    .container { padding: 15px; }
+    .vip-intro {
+      background: linear-gradient(90deg, #333, #000);
+      border: 2px solid gold;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px gold;
+    }
+    .vip-intro h2 { color: gold; margin-top: 0; }
+    .game-list { display: flex; flex-direction: column; gap: 10px; }
+    .game-card {
+      display: flex;
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 10px;
+      align-items: center;
+    }
+    .game-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      margin-right: 15px;
+    }
+    .game-info h3 {
+      margin: 0 0 5px 0;
+      font-size: 1.05em;
+      color: #00ffe7;
+    }
+    .game-info p {
+      margin: 0;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .end-message {
+      text-align: center;
+      color: #888;
+      margin: 20px 0;
+    }
+    .back-button {
+      display: block;
+      padding: 12px;
+      color: #0ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="products.html" class="back-button">← 返回商品列表</a>
+    <div class="vip-intro">
+      <h2>VIP 尊榮方案</h2>
+      <p>只要一次購買，立即解鎖以下所有高階遊戲功能工具，享受最頂級的專屬待遇。</p>
+    </div>
+
+    <div class="game-list" id="gameList"></div>
+    <div class="end-message" id="endMessage">已全部載入完畢</div>
+  </div>
+
+  <script>
+    const list = document.getElementById("gameList");
+    const names = [
+      "夢想小鎮", "夢幻花園", "夢幻家園", "神魔之塔", "天堂M",
+      "Garena 傳說對決", "原神", "蛋仔派對", "RO仙境傳說", "Pokemon GO"
+    ];
+    for (let i = 0; i < names.length; i++) {
+      const item = document.createElement("div");
+      item.className = "game-card";
+      item.innerHTML = `
+        <img src="default-product.png" alt="${names[i]}">
+        <div class="game-info">
+          <h3>${names[i]}</h3>
+          <p>此遊戲工具已包含於 VIP 方案中，享受完整功能與支援。</p>
+        </div>
+      `;
+      list.appendChild(item);
+    }
+  </script>
+</body>
+</html>
