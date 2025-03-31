@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameBoost 黑科商城</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GameBoost 數位商城</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      background: linear-gradient(120deg, #111, #000);
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #00ffe7;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #ccc;
+      font-size: 1.1em;
+      margin-bottom: 2em;
+    }
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background: #00ffe7;
+      color: #000;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background: #0ff;
+    }
+    .vip-button {
+      background: gold;
+    }
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>GameBoost 數位商城</h1>
-        <nav>
-            <a href="index.html">首頁</a>
-            <a href="products.html">商品列表</a>
-            <a href="faq.html">常見問題</a>
-            <a href="contact.html">聯絡我們</a>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h2>打造屬於你的數位神器</h2>
-            <p>專業、穩定、科技感十足的數位工具平台</p>
-            <a href="products.html" class="btn">立即查看商品</a>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 GameBoost. All rights reserved.</p>
-    </footer>
+  <h1>GameBoost 數位商城</h1>
+  <p>專為遊戲玩家打造的神器平台，工具齊全、操作簡單、即時支援</p>
+
+  <a href="products.html" class="button">進入商品商城</a>
+  <a href="vip.html" class="button vip-button">查看 VIP 尊榮方案</a>
+
+  <footer>
+    &copy; 2025 GameBoost. All rights reserved.
+  </footer>
 </body>
 </html>
