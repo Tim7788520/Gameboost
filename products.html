@@ -36,16 +36,31 @@
       font-size: 0.9em;
       color: #ccc;
     }
+    .back-button {
+      display: block;
+      padding: 12px;
+      color: #0ff;
+      text-decoration: none;
+      margin: 10px 0 0 10px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #888;
+      margin-top: -10px;
+      margin-bottom: 20px;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
-  <h1 style="text-align:center; padding: 1em;">GameBoost 數位商城</h1>
+  <a href="index.html" class="back-button">← 返回首頁</a>
 
-  <input type="text" id="searchInput" class="search-box" placeholder="搜尋商品..." onkeyup="searchProducts()" />
+  <h1 style="text-align:center; padding: 0.5em 1em 0 1em;">GameBoost 數位商城</h1>
+  <div class="subtitle">麥茶電玩</div>
 
-  <div class="product-list" id="productList">
-    <!-- 商品卡片將透過 JS 動態載入 -->
-  </div>
+  <input type="text" id="searchInput" class="search-box" placeholder="搜尋商品…" onkeyup="searchProducts()" />
+
+  <div class="product-list" id="productList"></div>
 
   <script>
     const list = document.getElementById("productList");
@@ -94,7 +109,6 @@
       renderProducts(filter);
     }
 
-    // 預設載入所有商品
     renderProducts();
   </script>
 </body>
