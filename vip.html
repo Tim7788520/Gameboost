@@ -61,28 +61,80 @@
       <p>只要一次購買，立即解鎖以下所有高階遊戲功能工具，享受最頂級的專屬待遇。</p>
     </div>
 
-    <div class="game-list" id="gameList"></div>
-    <div class="end-message" id="endMessage">已全部載入完畢</div>
-  </div>
-
-  <script>
-    const list = document.getElementById("gameList");
-    const names = [
-      "夢想小鎮", "夢幻花園", "夢幻家園", "神魔之塔", "天堂M",
-      "Garena 傳說對決", "原神", "蛋仔派對", "RO仙境傳說", "Pokemon GO"
-    ];
-    for (let i = 0; i < names.length; i++) {
-      const item = document.createElement("div");
-      item.className = "game-card";
-      item.innerHTML = `
-        <img src="default-product.png" alt="${names[i]}">
+    <div class="game-list">
+      <div class="game-card">
+        <img src="default-product.png" alt="夢想小鎮">
         <div class="game-info">
-          <h3>${names[i]}</h3>
-          <p>此遊戲工具已包含於 VIP 方案中，享受完整功能與支援。</p>
+          <h3>夢想小鎮</h3>
+          <p>自動任務、資源管理神器</p>
         </div>
-      `;
-      list.appendChild(item);
-    }
-  </script>
+      </div>
+      <div class="game-card">
+        <img src="default-product.png" alt="夢幻花園">
+        <div class="game-info">
+          <h3>夢幻花園</h3>
+          <p>任務代刷、加速闖關</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="default-product.png" alt="夢幻家園">
+        <div class="game-info">
+          <h3>夢幻家園</h3>
+          <p>資源全開、每日任務自動完成</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="default-product.png" alt="原神">
+        <div class="game-info">
+          <h3>原神</h3>
+          <p>自動刷材料、快速跑圖</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="default-product.png" alt="天堂M">
+        <div class="game-info">
+          <h3>天堂M</h3>
+          <p>掛機練功 + 裝備清單優化</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="default-product.png" alt="傳說對決">
+        <div class="game-info">
+          <h3>傳說對決</h3>
+          <p>自動戰績分析 + 快速教學</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="default-product.png" alt="Pokemon GO">
+        <div class="game-info">
+          <h3>Pokemon GO</h3>
+          <p>模擬定位抓怪、進階孵蛋</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="default-product.png" alt="神魔之塔">
+        <div class="game-info">
+          <h3>神魔之塔</h3>
+          <p>解任務代刷神器</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="default-product.png" alt="蛋仔派對">
+        <div class="game-info">
+          <h3>蛋仔派對</h3>
+          <p>活動掛機、資源輔助</p>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="default-product.png" alt="RO仙境傳說">
+        <div class="game-info">
+          <h3>RO仙境傳說</h3>
+          <p>每日副本、掛機支援</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="end-message">已全部載入完畢</div>
+  </div>
 </body>
 </html>
