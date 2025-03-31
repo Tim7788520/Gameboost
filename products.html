@@ -6,6 +6,10 @@
   <title>商品列表 - GameBoost</title>
   <style>
     body { background: #111; color: #fff; font-family: sans-serif; margin: 0; padding: 0; }
+    .search-box {
+      width: 90%; max-width: 400px; margin: 20px auto; display: block;
+      padding: 10px; font-size: 1em; border-radius: 6px; border: none; outline: none;
+    }
     .product-list { display: flex; flex-direction: column; padding: 10px; }
     .product-item {
       display: flex;
@@ -36,34 +40,62 @@
 </head>
 <body>
   <h1 style="text-align:center; padding: 1em;">GameBoost 數位商城</h1>
+
+  <input type="text" id="searchInput" class="search-box" placeholder="搜尋商品..." onkeyup="searchProducts()" />
+
   <div class="product-list" id="productList">
-
-    <!-- VIP 卡片 -->
-    <a href="vip.html" class="product-item" style="border: 2px solid gold; box-shadow: 0 0 12px gold;">
-      <img src="default-product.png" alt="VIP">
-      <div class="product-info">
-        <h3>VIP 尊榮方案（最推薦）</h3>
-        <p>一次購買暢玩 10 款高階遊戲工具，立即體驗！</p>
-      </div>
-    </a>
-
+    <!-- 商品卡片將透過 JS 動態載入 -->
   </div>
 
   <script>
     const list = document.getElementById("productList");
-    for (let i = 1; i <= 10; i++) {
-      const item = document.createElement("a");
-      item.href = `product${i}.html`;
-      item.className = "product-item";
-      item.innerHTML = `
-        <img src="default-product.png" alt="商品${i}">
-        <div class="product-info">
-          <h3>商品${i}</h3>
-          <p>這是商品${i} 的測試說明，協助玩家更有效率地操作。</p>
-        </div>
-      `;
-      list.appendChild(item);
+    const searchInput = document.getElementById("searchInput");
+
+    const products = [
+      {
+        name: "VIP 尊榮方案（最推薦）",
+        desc: "一次購買暢玩 10 款高階遊戲工具，立即體驗！",
+        link: "vip.html"
+      },
+      ...Array.from({ length: 10 }, (_, i) => ({
+        name: `商品${i + 1}`,
+        desc: `這是商品${i + 1} 的測試說明，協助玩家更有效率地操作。`,
+        link: `product${i + 1}.html`
+      }))
+    ];
+
+    function renderProducts(filter = "") {
+      list.innerHTML = "";
+      products.forEach(product => {
+        const name = product.name.toLowerCase();
+        const desc = product.desc.toLowerCase();
+        if (name.includes(filter) || desc.includes(filter)) {
+          const card = document.createElement("a");
+          card.href = product.link;
+          card.className = "product-item";
+          if (product.name.includes("VIP")) {
+            card.style.border = "2px solid gold";
+            card.style.boxShadow = "0 0 12px gold";
+          }
+          card.innerHTML = `
+            <img src="default-product.png" alt="${product.name}">
+            <div class="product-info">
+              <h3>${product.name}</h3>
+              <p>${product.desc}</p>
+            </div>
+          `;
+          list.appendChild(card);
+        }
+      });
     }
+
+    function searchProducts() {
+      const filter = searchInput.value.toLowerCase();
+      renderProducts(filter);
+    }
+
+    // 預設載入所有商品
+    renderProducts();
   </script>
 </body>
 </html>
