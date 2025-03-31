@@ -1,48 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>商品列表 - GameBoost</title>
-<link href="style.css" rel="stylesheet"/>
-<style>
-    body {
-      background: #111;
-      color: #fff;
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      text-align: center;
-      padding: 1em;
-    }
-    .product-list {
-      display: flex;
-      flex-direction: column;
-      padding: 10px;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>商品列表 - GameBoost</title>
+  <style>
+    body { background: #111; color: #fff; font-family: sans-serif; margin: 0; padding: 0; }
+    .product-list { display: flex; flex-direction: column; padding: 10px; }
     .product-item {
       display: flex;
       align-items: center;
       background: #1a1a1a;
       border-radius: 10px;
-      margin: 10px 0;
+      margin: 10px;
       padding: 10px;
+      text-decoration: none;
     }
     .product-item img {
       width: 60px;
       height: 60px;
-      border-radius: 12px;
+      border-radius: 10px;
       margin-right: 15px;
     }
-    .product-info {
-      flex-grow: 1;
-    }
     .product-info h3 {
-      margin: 0 0 6px 0;
-      font-size: 1.1em;
+      margin: 0 0 5px 0;
+      font-size: 1.05em;
       color: #00ffe7;
     }
     .product-info p {
@@ -50,39 +32,29 @@
       font-size: 0.9em;
       color: #ccc;
     }
-    .load-more {
-      display: block;
-      text-align: center;
-      padding: 12px;
-      background: #00ffe7;
-      color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-      margin: 20px auto;
-      width: 80%;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
-<header>
-<h1>GameBoost 數位商城</h1>
-</header>
-<a class="back-button" href="index.html" style="display:block; padding:10px 20px; font-size:16px; color:#0ff; text-decoration:none;">← 返回首頁</a>
-<div class="product-list" id="productList"><a class="product-item" href="product1.html" style="text-decoration:none;"><img alt="商品1" src="default-product.png"/><div class="product-info"><h3>商品1</h3><p>這是商品1 的測試說明，協助玩家更有效率地操作。</p></div></a><a class="product-item" href="product2.html" style="text-decoration:none;"><img alt="商品2" src="default-product.png"/><div class="product-info"><h3>商品2</h3><p>這是商品2 的測試說明，協助玩家更有效率地操作。</p></div></a><a class="product-item" href="product3.html" style="text-decoration:none;"><img alt="商品3" src="default-product.png"/><div class="product-info"><h3>商品3</h3><p>這是商品3 的測試說明，協助玩家更有效率地操作。</p></div></a><a class="product-item" href="product4.html" style="text-decoration:none;"><img alt="商品4" src="default-product.png"/><div class="product-info"><h3>商品4</h3><p>這是商品4 的測試說明，協助玩家更有效率地操作。</p></div></a><a class="product-item" href="product5.html" style="text-decoration:none;"><img alt="商品5" src="default-product.png"/><div class="product-info"><h3>商品5</h3><p>這是商品5 的測試說明，協助玩家更有效率地操作。</p></div></a><a class="product-item" href="product6.html" style="text-decoration:none;"><img alt="商品6" src="default-product.png"/><div class="product-info"><h3>商品6</h3><p>這是商品6 的測試說明，協助玩家更有效率地操作。</p></div></a></div>
-<footer>
-<p>© 2025 GameBoost. All rights reserved.</p>
-</footer>
+  <h1 style="text-align:center; padding: 1em;">GameBoost 數位商城</h1>
+  <div class="product-list" id="productList">
 
-<script>
+    <!-- VIP 卡片 -->
+    <a href="vip.html" class="product-item" style="border: 2px solid gold; box-shadow: 0 0 12px gold;">
+      <img src="default-product.png" alt="VIP">
+      <div class="product-info">
+        <h3>VIP 尊榮方案（最推薦）</h3>
+        <p>一次購買暢玩 10 款高階遊戲工具，立即體驗！</p>
+      </div>
+    </a>
 
-  window.onload = function() {
-    const list = document.getElementById('productList');
-    for (let i = 7; i <= 10; i++) {
-      const item = document.createElement('a');
+  </div>
+
+  <script>
+    const list = document.getElementById("productList");
+    for (let i = 1; i <= 10; i++) {
+      const item = document.createElement("a");
       item.href = `product${i}.html`;
-      item.className = 'product-item';
-      item.style = 'text-decoration:none;';
+      item.className = "product-item";
       item.innerHTML = `
         <img src="default-product.png" alt="商品${i}">
         <div class="product-info">
@@ -92,12 +64,6 @@
       `;
       list.appendChild(item);
     }
-
-    const endMsg = document.createElement('div');
-    endMsg.style = "text-align: center; color: #888; margin: 20px;";
-    endMsg.innerText = "已全部載入完畢";
-    list.appendChild(endMsg);
-  };
-
-</script></body>
+  </script>
+</body>
 </html>
