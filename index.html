@@ -26,41 +26,54 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
-    .button-group a {
+    .button {
       padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
     }
     .btn-store {
       background: #00ffff;
-      color: black;
+      color: #000;
     }
     .btn-vip {
       background: gold;
-      color: black;
+      color: #000;
     }
     .btn-faq {
       background: #ccc;
-      color: black;
+      color: #000;
     }
     footer {
       margin-top: 60px;
       font-size: 14px;
       color: #888;
     }
+
+    @media (max-width: 600px) {
+      .button-group {
+        flex-direction: column;
+      }
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>GameBoost 數位商城</h1>
   <p>專為遊戲玩家打造的神器平台，工具齊全、操作簡單、即時支援</p>
+
   <div class="button-group">
-    <a href="products.html" class="btn-store">進入商品商城</a>
-    <a href="vip.html" class="btn-vip">查看 VIP 尊榮方案</a>
-    <a href="faq.html" class="btn-faq">查看常見問題</a>
+    <a href="products.html" class="button btn-store">進入商品商城</a>
+    <a href="vip.html" class="button btn-vip">查看 VIP 尊榮方案</a>
+    <a href="faq.html" class="button btn-faq">查看常見問題</a>
   </div>
+
   <footer>
     © 2025 GameBoost. All rights reserved.
   </footer>
