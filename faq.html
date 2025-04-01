@@ -1,61 +1,99 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>常見問題 - GameBoost</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>常見問題 - GameBoost</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .back-button {
+      color: #0ff;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #00ffff;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+      padding: 12px;
+      background: #1a1a1a;
+      border-left: 5px solid #00ffff;
+      border-radius: 8px;
+    }
+    .faq-item h3 {
+      margin: 0 0 5px;
+      color: #00ffe7;
+      font-size: 1em;
+    }
+    .faq-item p {
+      margin: 0;
+      color: #ccc;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    .notice {
+      margin-top: 30px;
+      padding: 16px;
+      background: #222;
+      border-left: 5px solid gold;
+      border-radius: 8px;
+    }
+    .notice h3 {
+      color: gold;
+      margin-bottom: 10px;
+    }
+    .notice p {
+      margin: 6px 0;
+      font-size: 0.92em;
+      color: #ccc;
+    }
+    .notice p::before {
+      content: "🔹 ";
+    }
+  </style>
 </head>
-<body>   
-    <header>
-        <h1>GameBoost 數位商城</h1>
-        <nav>
-            <a href="index.html">首頁</a>
-            <a href="products.html">商品列表</a>
-            <a href="faq.html">常見問題</a>
-        </nav>
-    </header>
-    <main>
-        <section class="faq">
-            <h2>常見問題 FAQ</h2>
+<body>
+  <a href="index.html" class="back-button">← 返回首頁</a>
+  <h1>常見問題</h1>
 
-            <div class="faq-item">
-                <h3>Q1：購買流程是怎麼樣的？</h3>
-                <p>您可以先在商品頁挑選想要的工具，點擊「聯絡方式」後使用 <strong>官方Line</strong> 與我們聯繫，我們會確認商品與付款方式，完成後立即交付。</p>
-            </div>
+  <div class="faq-item">
+    <h3>Q1：購買流程是怎樣的？</h3>
+    <p>您可以先在商品列表挑選想要的商品，聯絡小編進行購買。</p>
+  </div>
 
-            <div class="faq-item">
-                <h3>Q2：付款方式有哪些？</h3>
-                <p>目前支援：</p>
-                <ul>
-                    <li>Line Pay</li>
-                    <li>銀行轉帳</li>
-                    <li>虛擬貨幣</li>
-                    <li>街口支付</li>
-                    <li>超商代碼</li>
-                </ul>
-                <p>請聯絡我們取得付款資訊。</p>
-            </div>
+  <div class="faq-item">
+    <h3>Q2：商品多久可以交付？</h3>
+    <p>大部分商品付款後 5~10 分鐘內即可交付。如遇高峰或特殊需求，需耐心等候。</p>
+  </div>
 
-            <div class="faq-item">
-                <h3>Q3：商品多久可以交付？</h3>
-                <p>大部分商品付款後 5~10 分鐘內即可交付。如遇高峰或特殊需求，我們會即時回報。</p>
-            </div>
+  <div class="faq-item">
+    <h3>Q3：輔助&修改會封號？</h3>
+    <p>我們提供的工具經過長期測試，盡可能降低風險，但每款遊戲的偵測機制不同，請玩家自行斟酌使用風險。</p>
+  </div>
 
-            <div class="faq-item">
-                <h3>Q4：這些工具會不會被封號？</h3>
-                <p>我們提供的工具經過長期測試，盡可能降低風險，但每款遊戲的偵測機制不同，請玩家自行斟酌使用風險。</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Q5：售後服務怎麼提供？</h3>
-                <p>如遇使用問題，我們提供 Line / TG / Discord 線上協助。請保留交易紀錄與產品代碼方便查詢。</p>
-            </div>
-
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 GameBoost. All rights reserved.</p>
-    </footer>
+  <div class="notice">
+    <h3>⚠️ 注意事項 ⚠️</h3>
+    <p>📢 激活碼請自行妥善保管，若遺失恕不補發。</p>
+    <p>📢 輔助程式內的功能可能因遊戲防護機制更新而導致部分功能失效，敬請知悉。</p>
+    <p>📢 商品屬於代購性質，如遊戲改版導致輔助需要更新，請耐心等待。</p>
+    <p>若開發商中途中斷服務，本賣場不提供任何補償，敬請理解。</p>
+    <p>📢 使用遊戲修改、外掛、第三方輔助本身存在風險，請低調使用。</p>
+    <p>若遭封號、禁止登入等問題，本店概不負責，亦不提供退款，請務必三思。</p>
+    <p>📢 如遇遊戲改版，若開發商未更新或更新過慢，無法提供補償，敬請見諒。</p>
+    <p>📢 一旦發貨，概不接受任何理由退款退貨。</p>
+    <p>📢 永久卡指可使用至輔助開發商終止服務，並非遊戲官方永久有效。</p>
+    <p>📢 本賣場商品屬於「例外商品類別」，不適用 7 天鑑賞期。</p>
+    <p>根據消保法第 19 條（不退費），此類商品屬於數位內容或一次性完成之線上服務，購買即視為同意此條款，不接受退款。</p>
+  </div>
 </body>
 </html>
