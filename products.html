@@ -14,17 +14,22 @@
     .product-item {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       background: #1a1a1a;
       border-radius: 10px;
       margin: 10px;
       padding: 10px;
       text-decoration: none;
+      position: relative;
     }
     .product-item img {
       width: 60px;
       height: 60px;
       border-radius: 10px;
       margin-right: 15px;
+    }
+    .product-info {
+      flex: 1;
     }
     .product-info h3 {
       margin: 0 0 5px 0;
@@ -35,6 +40,14 @@
       margin: 0;
       font-size: 0.9em;
       color: #ccc;
+    }
+    .view-btn {
+      background: #00ffff;
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.9em;
     }
     .back-button {
       display: block;
@@ -67,73 +80,19 @@
     const searchInput = document.getElementById("searchInput");
 
     const products = [
-  {
-    name: "VIP 尊榮方案（最推薦）",
-    desc: "暢玩多款熱門破解遊戲(持續新增遊戲)",
-    link: "vip.html",
-    img: "vip.png"
-  },
-  {
-    name: "夢想小鎮",
-    desc: "模擬建設養成破解，一鍵升級工具包",
-    link: "product1.html",
-    img: "vip.png"
-  },
-  {
-    name: "夢幻花園 / 家園",
-    desc: "無限星星道具輔助，自由闖關不卡關",
-    link: "product2.html",
-    img: "vip.png"
-  },
-  {
-    name: "神魔之塔",
-    desc: "技能無CD、無敵、倍率強化工具",
-    link: "product3.html",
-    img: "vip.png"
-  },
-  {
-    name: "元氣騎士",
-    desc: "無限血量、鑽石、技能CD、秒殺",
-    link: "product4.html",
-    img: "vip.png"
-  },
-  {
-    name: "怪物彈珠（日服）",
-    desc: "技能無冷卻、無敵、連發功能",
-    link: "product5.html",
-    img: "vip.png"
-  },
-  {
-    name: "刀鋒養成",
-    desc: "無敵、秒殺、技能加速輔助",
-    link: "product6.html",
-    img: "vip.png"
-  },
-  {
-    name: "地球末日生存",
-    desc: "無限體力、郵件複製、建築破解",
-    link: "product7.html",
-    img: "vip.png"
-  },
-  {
-    name: "轉生史萊姆",
-    desc: "角色全屬性強化、無限資源破解",
-    link: "product8.html",
-    img: "vip.png"
-  },
-  {
-    name: "Pokemon GO 飛人版",
-    desc: "多地圖切換、模擬定位、不限距離飛行",
-    link: "product9.html",
-    img: "vip.png"
-  },
-  {
-    name: "七龍珠激戰傳說",
-    desc: "無限技能、自動Rush、跳過新手",
-    link: "product10.html",
-    img: "vip.png"
-  }
-];
+      {
+        name: "夢想小鎮",
+        desc: "模擬建設養成破解，一鍵升級工具包",
+        link: "product1.html",
+        img: "vip.png"
+      },
+      {
+        name: "夢幻花園 / 家園",
+        desc: "無限星星道具輔助，自由闖關不卡關",
+        link: "product2.html",
+        img: "vip.png"
+      }
+    ];
 
     function renderProducts(filter = "") {
       list.innerHTML = "";
@@ -144,16 +103,13 @@
           const card = document.createElement("a");
           card.href = product.link;
           card.className = "product-item";
-          if (product.name.includes("VIP")) {
-            card.style.border = "2px solid gold";
-            card.style.boxShadow = "0 0 12px gold";
-          }
           card.innerHTML = `
-           <img src="${product.img}" alt="${product.name}">
+            <img src="${product.img}" alt="${product.name}">
             <div class="product-info">
               <h3>${product.name}</h3>
               <p>${product.desc}</p>
             </div>
+            <div class="view-btn">查看</div>
           `;
           list.appendChild(card);
         }
